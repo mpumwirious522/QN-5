@@ -1,0 +1,44 @@
+// Retailer subclass (18% VAT)
+public class Retailer extends TaxCategory {
+    private static final double VAT_RATE = 0.18;
+    private static final String CATEGORY_NAME = "Retailer";
+
+    public Retailer() {
+        super(CATEGORY_NAME, VAT_RATE);
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s (%.0f%% VAT)", getCategoryName(), getVatRate() * 100);
+    }
+}
+
+// Wholesaler subclass (15% VAT)
+public class Wholesaler extends TaxCategory {
+    private static final double VAT_RATE = 0.15;
+    private static final String CATEGORY_NAME = "Wholesaler";
+
+    public Wholesaler() {
+        super(CATEGORY_NAME, VAT_RATE);
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s (%.0f%% VAT)", getCategoryName(), getVatRate() * 100);
+    }
+}
+
+// Importer subclass (10% VAT)
+public class Importer extends TaxCategory {
+    private static final double VAT_RATE = 0.10;
+    private static final String CATEGORY_NAME = "Importer";
+
+    public Importer() {
+        super(CATEGORY_NAME, VAT_RATE);
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s (%.0f%% VAT)", getCategoryName(), getVatRate() * 100);
+    }
+}
